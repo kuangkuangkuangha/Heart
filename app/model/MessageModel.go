@@ -59,9 +59,14 @@ func (model *MessageBelong) SendMessage(group_id string, data []int) helper.Retu
 	// Info[temp[3]] = message4.Message
 	var err error
 
+	// temp[i] = 1,2,3,,,,9,10
+
 	for i := 0; i < 4; i++ {
 		var messageeess []MessageBelong
-		err = db.Table("message").Where("question=? And group_id=? And result=?", temp[i], group_id, data[temp[i]-1]).Select("message").Find(&messageeess).Error
+		index := temp[i] - 1
+		log.Print("索引是:", index)
+		log.Print(data[9])
+		err = db.Table("message").Where("question=? And group_id=? And result=?", temp[i], group_id, data[index]).Find(&messageeess).Error
 		// messagees = append(messagees, message2)
 
 		// log.Print(messageeess)
