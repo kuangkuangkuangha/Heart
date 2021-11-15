@@ -11,7 +11,7 @@ func RandomTestBase() []int {
 	//测试5次
 	var nums []int
 	for i := 0; i < 5; i++ {
-		nums = generateRandomNumber(1, 10, 4)
+		nums = generateRandomNumber(1, 11, 4)
 	}
 	log.Println(nums)
 	return nums
