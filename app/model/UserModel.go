@@ -31,16 +31,7 @@ type UserInfoTwo struct {
 	Answer   string `json:"answer" gorm:"answer" binding:"required"`
 }
 
-// 存储信息
-func (model *User) StoreUserInfo(data User) helper.ReturnType {
-	err := db.Table("heart").Create(&data).Error
-	if err != nil {
-		return helper.ReturnRes(-1, "存储信息失败", err.Error())
-	} else {
-		return helper.ReturnType{Status: 1, Msg: "存储信息成功", Data: data}
-	}
-}
-
+// 存储问卷一的答案
 func (model *UserInfoOne) QuestionNaireOne(data UserInfoOne) helper.ReturnType {
 	err := db.Table("q1").Create(&data).Error
 	if err != nil {
@@ -50,6 +41,7 @@ func (model *UserInfoOne) QuestionNaireOne(data UserInfoOne) helper.ReturnType {
 	}
 }
 
+// 存储问卷二的大答案
 func (model *UserInfoTwo) QuestionNaireTwo(data UserInfoTwo) helper.ReturnType {
 	err := db.Table("q2").Create(&data).Error
 	if err != nil {
