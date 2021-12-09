@@ -11,14 +11,11 @@
  Target Server Version : 80022
  File Encoding         : 65001
 
- Date: 01/12/2021 14:02:59
+ Date: 08/12/2021 14:52:59
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
-CREATE DATABASE heart;
-USE heart;
 
 -- ----------------------------
 -- Table structure for message
@@ -289,17 +286,15 @@ CREATE TABLE `q1` (
   `group_id` int DEFAULT NULL,
   `point` int DEFAULT NULL,
   `time` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci DEFAULT NULL,
-  `tel` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci DEFAULT NULL,
+  `sex` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci DEFAULT NULL,
   `answer` varchar(255) COLLATE utf8mb4_german2_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_german2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_german2_ci;
 
 -- ----------------------------
 -- Records of q1
 -- ----------------------------
 BEGIN;
-INSERT INTO `q1` VALUES (9, '3489234', 3, 100, '898h', '431543', '');
-INSERT INTO `q1` VALUES (10, '3489234', 3, 100, '898h', '431543', '903485');
 COMMIT;
 
 -- ----------------------------
@@ -312,17 +307,15 @@ CREATE TABLE `q2` (
   `group_id` int DEFAULT NULL,
   `point` int DEFAULT NULL,
   `time` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci DEFAULT NULL,
-  `tel` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci DEFAULT NULL,
+  `sex` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci DEFAULT NULL,
   `answer` varchar(255) COLLATE utf8mb4_german2_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_german2_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_german2_ci;
 
 -- ----------------------------
 -- Records of q2
 -- ----------------------------
 BEGIN;
-INSERT INTO `q2` VALUES (9, '3489234', 3, 100, '898h', '431543', '');
-INSERT INTO `q2` VALUES (10, '3489234', 3, 100, '898h', '431543', '903485');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
